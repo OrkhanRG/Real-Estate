@@ -1,0 +1,17 @@
+RewriteEngine on
+#ErrorDocument 404 / 404.php
+
+
+RewriteRule ^haqqimizda$ haqqimizda.php [NC,L]
+RewriteRule ^xeberler$ xeberler.php [NC,L]
+RewriteRule ^bizimle-elaqe$ elaqe.php [NC,L]
+
+RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
+
+
+RewriteRule ^([0-9a-zA-Z-_]+)/([0-9]+)$ xeber-detay.php?sef=$1&mezmun_id=$2 [L,QSA]
+
+
+RewriteRule ^emlak-([0-9a-zA-Z-_]+)-([0-9]+)$ emlak-detay.php?sef=$1&emlak_id=$2 [L,QSA]
+
+
